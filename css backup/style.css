@@ -225,7 +225,7 @@ border-bottom: solid 5px  rgb(22, 39, 26);
       font-size: 4rem;
   
 }
-*/
+
 
 
 #mapa{
@@ -281,7 +281,6 @@ border-bottom: solid 5px  rgb(22, 39, 26);
   display: flex;
   text-align: center;
   justify-content: center;
-
 border-bottom:1px solid  rgb(47, 148, 70) ;
   text-align: center;
   font-size: 50px;
@@ -564,10 +563,11 @@ section .contenedor_contacto{
     padding: 0;
 }
 
-.info_contacto ul li{
-    padding: 0.3em;
-    margin-right: auto;
+.info_contacto ul  li{
+  list-style: none;
+  padding: 0;
 }
+
 
 
 
