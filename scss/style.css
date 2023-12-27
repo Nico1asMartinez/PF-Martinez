@@ -79,7 +79,6 @@ nav .lista li i {
   grid-template-rows: 52.7rem 40rem;
   row-gap: 50px;
   margin: 0;
-  overflow: hidden;
 }
 .body_index .contenedor_prueba_grid .contenedor_video_inicio {
   background-color: black;
@@ -115,22 +114,21 @@ nav .lista li i {
   font-size: 1.5rem;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 700px) {
   h3 {
+    position: relative;
     left: 40rem;
-    padding-bottom: 6px;
+    padding-bottom: 50px;
+  }
+  h4 {
+    padding: 15px;
   }
   p {
     padding: 10px;
   }
 }
 /* mapa */
-body {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 7em;
-}
-body .grid_mapa {
+.grid_mapa {
   border-collapse: collapse;
   display: grid;
   align-items: center;
@@ -141,7 +139,7 @@ body .grid_mapa {
   row-gap: 1rem;
   margin: 10px;
 }
-body .grid_mapa .contenedor_comollegar {
+.grid_mapa .contenedor_comollegar {
   border: solid 5px black;
   display: flex;
   flex-direction: column;
@@ -155,7 +153,7 @@ body .grid_mapa .contenedor_comollegar {
   background-color: rgb(0, 0, 0);
   color: rgba(255, 255, 255, 0.859);
 }
-body .grid_mapa .contenedor_comollegar .como_llegar {
+.grid_mapa .contenedor_comollegar .como_llegar {
   margin: 5px;
   font-family: "Barlow", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
@@ -163,7 +161,7 @@ body .grid_mapa .contenedor_comollegar .como_llegar {
   font-family: "Roboto Condensed", sans-serif;
   font-family: "Roboto Flex", sans-serif;
 }
-body .grid_mapa .contenedor_mapa {
+.grid_mapa .contenedor_mapa {
   border: solid 5px black;
   display: flex;
   overflow: hidden;
@@ -172,20 +170,13 @@ body .grid_mapa .contenedor_mapa {
   width: 100%;
   grid-area: mapa;
 }
-body .grid_mapa .contenedor_mapa .mapa {
+.grid_mapa .contenedor_mapa .mapa {
   height: 100%;
   width: 100%;
 }
-body .grid_mapa .contenedor_mapa .mapa iframe {
+.grid_mapa .contenedor_mapa .mapa iframe {
   width: 100%;
   height: 100%;
-}
-@media (max-width: 700px) {
-  body .grid_mapa .contenedor_comollegar {
-    font-size: 12.3px;
-    padding: 0;
-    margin: 0;
-  }
 }
 
 /* contacto*/
@@ -362,13 +353,7 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   font-family: "Roboto Condensed", sans-serif;
   font-family: "Roboto Flex", sans-serif;
 }
-.container_video .modificaciones {
-  display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
-  grid-template-areas: "video video" "motor pinturas" "carroceria llantas";
-  padding-left: 15em;
-}
-.container_video .modificaciones .modificaciones_pinturasyvinilos {
+.container_video .modificaciones_pinturasyvinilos {
   display: flex;
   justify-content: space-between;
   grid-area: pinturas;
@@ -380,13 +365,13 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   margin: 10px;
   transition: all 0.5s;
 }
-.container_video .modificaciones .modificaciones_pinturasyvinilos:hover {
+.container_video .modificaciones_pinturasyvinilos:hover {
   transform: scale(0.9);
 }
-.container_video .modificaciones .modificaciones_pinturasyvinilos img {
+.container_video .modificaciones_pinturasyvinilos img {
   height: 230px;
 }
-.container_video .modificaciones .modificaciones_pinturasyvinilos h3 {
+.container_video .modificaciones_pinturasyvinilos h3 {
   font-family: "Barlow", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Playfair Display", serif;
@@ -397,7 +382,7 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   color: white;
   left: 55px;
 }
-.container_video .modificaciones .modificaciones_llantas {
+.container_video .modificaciones_llantas {
   display: flex;
   justify-content: space-between;
   grid-area: llantas;
@@ -409,13 +394,13 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   background-image: linear-gradient(rgb(6, 54, 82), rgb(63, 181, 250));
   transition: all 0.5s;
 }
-.container_video .modificaciones .modificaciones_llantas:hover {
+.container_video .modificaciones_llantas:hover {
   transform: scale(0.9);
 }
-.container_video .modificaciones .modificaciones_llantas img {
+.container_video .modificaciones_llantas img {
   height: 230px;
 }
-.container_video .modificaciones .modificaciones_llantas h3 {
+.container_video .modificaciones_llantas h3 {
   font-family: "Barlow", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Playfair Display", serif;
@@ -426,7 +411,7 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   color: white;
   left: 55px;
 }
-.container_video .modificaciones .modificaciones_carroceria {
+.container_video .modificaciones_carroceria {
   display: flex;
   justify-content: space-between;
   grid-area: carroceria;
@@ -439,13 +424,13 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   background-image: linear-gradient(rgb(6, 54, 82), rgb(63, 181, 250));
   transition: all 0.5s;
 }
-.container_video .modificaciones .modificaciones_carroceria:hover {
+.container_video .modificaciones_carroceria:hover {
   transform: scale(0.9);
 }
-.container_video .modificaciones .modificaciones_carroceria img {
+.container_video .modificaciones_carroceria img {
   height: 230px;
 }
-.container_video .modificaciones .modificaciones_carroceria h3 {
+.container_video .modificaciones_carroceria h3 {
   font-family: "Barlow", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Playfair Display", serif;
@@ -456,7 +441,7 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   color: white;
   left: 55px;
 }
-.container_video .modificaciones .modificaciones_motor {
+.container_video .modificaciones_motor {
   display: flex;
   justify-content: space-between;
   grid-area: motor;
@@ -469,13 +454,13 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   background-image: linear-gradient(rgb(6, 44, 67), rgb(63, 181, 250));
   transition: all 0.5s;
 }
-.container_video .modificaciones .modificaciones_motor:hover {
+.container_video .modificaciones_motor:hover {
   transform: scale(0.9);
 }
-.container_video .modificaciones .modificaciones_motor img {
+.container_video .modificaciones_motor img {
   height: 230px;
 }
-.container_video .modificaciones .modificaciones_motor h3 {
+.container_video .modificaciones_motor h3 {
   font-family: "Barlow", sans-serif;
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Playfair Display", serif;
@@ -487,98 +472,18 @@ body .grid_mapa .contenedor_mapa .mapa iframe {
   left: 55px;
 }
 
-@media (max-width: 1280px) {
-  .container_video {
-    grid-template-areas: "video video" "modificaciones modificaciones";
-  }
-  .container_video .modificaciones {
-    grid-area: modificaciones;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .container_video .modificaciones .modificaciones_pinturasyvinilos {
-    width: 365px;
-    height: 115px;
-  }
-  .container_video .modificaciones .modificaciones_pinturasyvinilos img {
-    height: 80px;
-    width: 80px;
-  }
-  .container_video .modificaciones .modificaciones_pinturasyvinilos h3 {
-    font-size: 30px;
-  }
-  .container_video .modificaciones .modificaciones_llantas {
-    width: 365px;
-    height: 115px;
-  }
-  .container_video .modificaciones .modificaciones_llantas img {
-    height: 80px;
-    width: 80px;
-  }
-  .container_video .modificaciones .modificaciones_llantas h3 {
-    font-size: 30px;
-  }
-  .container_video .modificaciones .modificaciones_carroceria {
-    width: 365px;
-    height: 115px;
-  }
-  .container_video .modificaciones .modificaciones_carroceria img {
-    height: 80px;
-    width: 80px;
-  }
-  .container_video .modificaciones .modificaciones_carroceria h3 {
-    font-size: 30px;
-  }
-  .container_video .modificaciones .modificaciones_motor {
-    width: 365px;
-    height: 115px;
-  }
-  .container_video .modificaciones .modificaciones_motor img {
-    height: 80px;
-    width: 80px;
-  }
-  .container_video .modificaciones .modificaciones_motor h3 {
-    font-size: 30px;
-  }
-}
 /*footer*/
 #footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
   overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 3rem;
   margin: 0;
-  height: min-content;
   background-color: rgb(0, 0, 0);
   color: white;
 }
 #footer .center {
   display: flex;
-  width: 100%;
-  align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
-
-@media (max-width: 1280px) {
-  #footer {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    padding-top: 50px;
-  }
-  #footer .center {
-    flex-direction: column;
-  }
-  #footer .center h2, #footer .center h4 {
-    padding: 3px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
